@@ -1,10 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+
+import InitiativesPage from './pages/Initiatives';
 
 function App() {
   return (
-    <div>
-      Hi
-    </div>
+    <Routes>
+      <Route exact path="/" element={<InitiativesPage />} />
+      <Route path="/test" element={<div>whatever</div>} />
+    </Routes>
   );
 }
 
