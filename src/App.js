@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<InitiativesPage />} />
-      <Route path="/measure" element={<InitiativeInfoPage />} />
+      <Route path="/measure/:id" element={<InitiativeInfoPage />} />
     </Routes>
   );
 }
