@@ -1,0 +1,27 @@
+.title {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.number {
+    text-align: center;
+    background: #2F90C9;
+    color:#ffffff;
+    line-height: 2rem;
+    padding: .75rem 1.5rem;
+    border-radius: 10px 0 0 10px;
+}
+
+.subject {
+    margin: auto 50px;
+    text-align: left;
+}

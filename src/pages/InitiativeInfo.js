@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import MainNavigation from "../components/layout/MainNavigation";
+import AboutSection from "../components/info/AboutSection";
+import InitiativeTitle from "../components/InitiativeTitle";
 
 import Data from "../local/data";
 
@@ -12,6 +13,8 @@ function InitiativeInfoPage(props) {
     info = info[0];
     return (
       <div>
+        <InitiativeTitle type={info.type} id={info.id} subject={info.subject}/>
+        <AboutSection />
         {Object.keys(info).map((key, index) => {
           return (
             <p key={key}>
@@ -27,7 +30,6 @@ function InitiativeInfoPage(props) {
   } else {
     return (
       <div>
-        <MainNavigation />
       </div>
     );
   }

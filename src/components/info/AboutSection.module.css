@@ -1,0 +1,16 @@
+.ballot {
+    width: 95%;
+    padding: 1px 0;
+    margin: auto;
+}
+
+.ballot p {
+    text-align:center;
+    /* margin: auto; */
+}
+
+.text {
+    width: 95%;
+    padding: 1px 0;
+    margin: 1rem auto;
+}
