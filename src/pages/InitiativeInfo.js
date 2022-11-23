@@ -13,8 +13,8 @@ function InitiativeInfoPage(props) {
     info = info[0];
     return (
       <div>
-        <InitiativeTitle type={info.type} id={info.id} subject={info.subject}/>
-        <AboutSection />
+        <InitiativeTitle type={info.type} id={info.id} subject={info.subject} />
+        <AboutSection type={info.type} ballotTitle={info.ballotTitle} />
         {Object.keys(info).map((key, index) => {
           return (
             <p key={key}>

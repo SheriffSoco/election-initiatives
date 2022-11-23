@@ -5,14 +5,12 @@ import classes from "./AboutSection.module.css";
 function AboutSection(props) {
   return (
     <div>
-      <h2>About this Initiative Petition</h2>
+      <h2 className={classes.title}>About this {props.type} Petition</h2>
       <Card>
         <div className={classes.ballot}>
           <p>
             <b>
-              {" "}
-              Amends Constitution: Legislators with ten unexcused absences from
-              floor sessions disqualified from holding next term of office.
+              {props.ballotTitle}
             </b>
           </p>
         </div>
