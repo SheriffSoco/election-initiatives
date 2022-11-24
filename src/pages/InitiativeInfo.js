@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import AboutSection from "../components/info/AboutSection";
+import SignatureBar from "../components/info/SignatureBar";
 import InitiativeTitle from "../components/InitiativeTitle";
 
 import Data from "../local/data";
@@ -13,6 +14,7 @@ function InitiativeInfoPage(props) {
     info = info[0];
     return (
       <div>
+        <SignatureBar count={10000} max={info.signatures}/>
         <InitiativeTitle type={info.type} id={info.id} subject={info.subject} />
         <AboutSection type={info.type} ballotTitle={info.ballotTitle} />
         {Object.keys(info).map((key, index) => {

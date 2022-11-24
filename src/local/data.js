@@ -3,7 +3,7 @@ const Data = [
     id: "14",
     type: "Initiative",
     statutory: "Constitutional",
-    signatures: "149,360",
+    signatures: 149360,
     circulationDate: "01/07/2022",
     stage: "onBallot",
     measureNo: "113",
