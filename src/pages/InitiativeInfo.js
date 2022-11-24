@@ -1,9 +1,13 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AboutSection from "../components/info/AboutSection";
 import SignatureBar from "../components/info/SignatureBar";
-import InitiativeTitle from "../components/InitiativeTitle";
+import InitiativeTitle from "../components/info/InitiativeTitle";
+import FullTextLink from "../components/info/FullTextLink";
+import StatusSection from "../components/info/StatusSection";
 
 import Data from "../local/data";
+import "./InitiativeInfo.css";
+
 
 function InitiativeInfoPage(props) {
   const { id } = useParams();
@@ -17,16 +21,8 @@ function InitiativeInfoPage(props) {
         <SignatureBar count={10000} max={info.signatures}/>
         <InitiativeTitle type={info.type} id={info.id} subject={info.subject} />
         <AboutSection type={info.type} ballotTitle={info.ballotTitle} />
-        {Object.keys(info).map((key, index) => {
-          return (
-            <p key={key}>
-              {key}: {info[key]}
-            </p>
-          );
-        })}
-        <div>
-          <Link to="/">Back</Link>
-        </div>
+        <FullTextLink />
+        <StatusSection />
       </div>
     );
   } else {

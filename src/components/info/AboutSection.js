@@ -5,7 +5,7 @@ import classes from "./AboutSection.module.css";
 function AboutSection(props) {
   return (
     <div>
-      <h2 className={classes.title}>About this {props.type} Petition</h2>
+      <h2>About this {props.type} Petition</h2>
       <Card>
         <div className={classes.ballot}>
           <p>

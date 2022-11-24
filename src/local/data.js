@@ -21,7 +21,7 @@ const Data = [
     petitionerThreePhone: "",
     subject: "Legislative Accountability 1",
     ballotTitle:
-      "Amends Constitution: Legislators with ten unexcused absences from floor sessions disqualified from holding next term of office:",
+      "Amends Constitution: Legislators with ten unexcused absences from floor sessions disqualified from holding next term of office",
     finalNoteText: "Measure 113",
     finalNoteDate: "07/25/2022",
   },
