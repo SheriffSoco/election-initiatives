@@ -8,15 +8,15 @@ function InitiativesPage() {
   return (
     <div className={classes.list}>
       {Data.map((measure) => (
-        <div className={classes.item}>
-        <Link key={measure.id} to={"/measure/" + measure.id}>
-          <InitiativeTitle
-            alt={true}
-            type={measure.type}
-            id={measure.id}
-            subject={measure.subject}
-          />
-        </Link>
+        <div key={measure.id} className={classes.item}>
+          <Link to={"/measure/" + measure.id}>
+            <InitiativeTitle
+              alt={true}
+              type={measure.type}
+              id={measure.id}
+              subject={measure.subject}
+            />
+          </Link>
         </div>
       ))}
     </div>

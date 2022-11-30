@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { useState } from 'react';
+import useToken from "./components/hooks/useToken.js";
 
 import InitiativesPage from "./pages/Initiatives";
 import InitiativeInfoPage from "./pages/InitiativeInfo";
@@ -8,7 +8,7 @@ import PreferencesPage from "./pages/Preferences";
 import Login from "./components/login/Login.js";
 
 function App() {
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
 
   if (!token) {
     return <Login setToken={setToken} />;
