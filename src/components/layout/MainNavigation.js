@@ -1,24 +1,30 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
-    <div className={classes.header}>
-      <h1>Get Measured</h1>
-      <ul>
-        <li>
+    <React.Fragment>
+      <div className={classes.header}>
         <Link to="/">
-          <b>Initiatives</b>
+          <h1>Get Measured</h1>
         </Link>
-        </li>
-        <li>
-        <Link to="/">
-          <b>About</b>
-        </Link>
-        </li>
-      </ul>
-    </div>
+        <ul>
+          <li>
+            <Link to="/">
+              <b>Initiatives</b>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <b>About</b>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className={classes.padding}></div>
+    </React.Fragment>
   );
 }
 
