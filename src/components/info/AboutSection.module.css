@@ -1,16 +1,36 @@
+.root {
+  margin: 1rem 0;
+}
+
 .ballot {
-    width: 95%;
-    padding: 1px 0;
-    margin: auto;
+  width: 95%;
+  padding: 1rem 0;
+  margin: auto;
 }
 
 .ballot p {
-    text-align:center;
-    /* margin: auto; */
+  text-align: center;
 }
 
 .text {
-    width: 95%;
-    padding: 1px 0;
-    margin: 1rem auto;
+  width: 95%;
+  padding: 1px 0;
+  margin: 0 auto 1rem;
+  border-top: 1px solid lightgrey;
+}
+
+.petitioners {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  text-align: center;
+  padding: 0;
+}
+
+.petitioner {
+  /* background-color: green; */
+  list-style: none;
+  margin: 1rem;
+  padding: 0;
 }

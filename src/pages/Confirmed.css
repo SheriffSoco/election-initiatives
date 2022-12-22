@@ -1,0 +1,14 @@
+.center {
+    width: 60%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.center p {
+    padding: 3rem 0 0 0;
+}
+
+.center a {
+    margin: 1rem 0 3rem 0;
+}

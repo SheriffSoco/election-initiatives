@@ -41,6 +41,26 @@
   background: #f34343;
 }
 
+.button--tab {
+  background: transparent;
+  color: #0879bb;
+  font-size: 20pt;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+}
+
+.button--tab:hover {
+  background: lightgrey;
+  color: #0879bb;
+}
+
+.button--tab-active,
+.button--tab-active:hover {
+  background: white;
+  color: #0879bb;
+}
+
 .button:disabled,
 .button:hover:disabled,
 .button:active:disabled {
