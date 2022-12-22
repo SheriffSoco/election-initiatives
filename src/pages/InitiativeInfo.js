@@ -45,6 +45,26 @@ function InitiativeInfoPage(props) {
   });
   if (info.length !== 0) {
     info = info[0];
+    const petitioners = [
+      {
+        name: info.petitionerOneName,
+        address: info.petitionerOneAddress,
+        city: info.petitionerOneCity,
+        phone: info.petitionerOnePhone,
+      },
+      {
+        name: info.petitionerTwoName,
+        address: info.petitionerTwoAddress,
+        city: info.petitionerTwoCity,
+        phone: info.petitionerTwoPhone,
+      },
+      {
+        name: info.petitionerThreeName,
+        address: info.petitionerThreeAddress,
+        city: info.petitionerThreeCity,
+        phone: info.petitionerThreePhone,
+      },
+    ];
     return (
       <React.Fragment>
         <Modal
@@ -93,10 +113,15 @@ function InitiativeInfoPage(props) {
           id={info.id}
           subject={info.subject}
         />
-        <AboutSection type={info.type} ballotTitle={info.ballotTitle} />
+        <AboutSection
+          type={info.type}
+          ballotTitle={info.ballotTitle}
+          petitioners={petitioners}
+        />
         <FullTextLink />
         <StatusSection />
         <SignatureButton onClick={openSignatureHandler} />
+        <StatusSection />
       </React.Fragment>
     );
   } else {

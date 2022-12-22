@@ -20,17 +20,9 @@
 }
 
 .petitioners {
-  /* background-color: red; */
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
   text-align: center;
-  padding: 0;
-}
-
-.petitioner {
-  /* background-color: green; */
-  list-style: none;
-  margin: 1rem;
   padding: 0;
 }

@@ -3,6 +3,7 @@ import Button from "../form-elements/Button";
 import Card from "../ui/Card";
 
 import classes from "./AboutSection.module.css";
+import PetitionerCard from "./PetitionerCard";
 
 function AboutSection(props) {
   const [section, setSection] = useState("text");
@@ -70,22 +71,14 @@ function AboutSection(props) {
         <Card>
           <div className={classes.ballot}>
             <ul className={classes.petitioners}>
-              <ul className={classes.petitioner}>
-                <li>
-                  <b>Andrea Kennedy-Smith</b>
-                </li>
-                <li>3242 NE Daffodil Drive</li>
-                <li>McMinnville, OR 97218</li>
-                <li>(503)707-2434</li>
-              </ul>
-              <ul className={classes.petitioner}>
-                <li>
-                  <b>Reed Scott-Schwalbach</b>
-                </li>
-                <li>1049 SE 80th Avenue</li>
-                <li>Portland, OR 97215</li>
-                <li>(503)473-9414</li>
-              </ul>
+              {props.petitioners.map((petitioner) => (
+                petitioner.name !== "" && <PetitionerCard
+                name={petitioner.name}
+                address={petitioner.address}
+                city={petitioner.city}
+                phone={petitioner.phone}
+              />
+              ))}
             </ul>
           </div>
         </Card>
