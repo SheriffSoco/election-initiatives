@@ -65,6 +65,11 @@ function InitiativeInfoPage(props) {
         phone: info.petitionerThreePhone,
       },
     ];
+    const notes = info.status ?? [];
+    let lastStatus = null;
+    if (notes.length > 0) {
+      lastStatus = notes[notes.length-1];
+    }
     return (
       <React.Fragment>
         <Modal
@@ -117,11 +122,14 @@ function InitiativeInfoPage(props) {
           type={info.type}
           ballotTitle={info.ballotTitle}
           petitioners={petitioners}
+          notes={notes}
         />
         <FullTextLink />
         <StatusSection />
-        <SignatureButton onClick={openSignatureHandler} />
-        <StatusSection />
+        <SignatureButton
+          onClick={openSignatureHandler}
+          lastStatus={lastStatus}
+        />
       </React.Fragment>
     );
   } else {

@@ -3,6 +3,7 @@ import Button from "../form-elements/Button";
 import Card from "../ui/Card";
 
 import classes from "./AboutSection.module.css";
+import NotesSection from "./NotesSection";
 import PetitionerCard from "./PetitionerCard";
 
 function AboutSection(props) {
@@ -16,19 +17,15 @@ function AboutSection(props) {
     setSection("petitioner");
   }
 
-  return (
-    <div className={classes.root}>
-      <Button tab tabActive={section === "text"} onClick={showTextHandler}>
-        About this Initiative Petition
-      </Button>
-      <Button
-        tab
-        tabActive={section === "petitioner"}
-        onClick={showPetitionerHandler}
-      >
-        About Chief Petitioners
-      </Button>
-      {section === "text" ? (
+  function showNoteHandler() {
+    setSection("note");
+  }
+
+  let content = null;
+
+  switch (section) {
+    case "text":
+      content = (
         <Card>
           <div className={classes.ballot}>
             <p>
@@ -67,22 +64,52 @@ function AboutSection(props) {
             </p>
           </div>
         </Card>
-      ) : (
+      );
+      break;
+    case "petitioner":
+      content = (
         <Card>
           <div className={classes.ballot}>
             <ul className={classes.petitioners}>
-              {props.petitioners.map((petitioner) => (
-                petitioner.name !== "" && <PetitionerCard
-                name={petitioner.name}
-                address={petitioner.address}
-                city={petitioner.city}
-                phone={petitioner.phone}
-              />
-              ))}
+              {props.petitioners.map(
+                (petitioner) =>
+                  petitioner.name !== "" && (
+                    <PetitionerCard
+                      name={petitioner.name}
+                      address={petitioner.address}
+                      city={petitioner.city}
+                      phone={petitioner.phone}
+                    />
+                  )
+              )}
             </ul>
           </div>
         </Card>
-      )}
+      );
+      break;
+    case "note":
+      content = <NotesSection notes={props.notes} />;
+      break;
+    default:
+      content = <p>an error occurred</p>;
+  }
+
+  return (
+    <div className={classes.root}>
+      <Button tab tabActive={section === "text"} onClick={showTextHandler}>
+        About this Initiative Petition
+      </Button>
+      <Button
+        tab
+        tabActive={section === "petitioner"}
+        onClick={showPetitionerHandler}
+      >
+        About Chief Petitioners
+      </Button>
+      <Button tab tabActive={section === "note"} onClick={showNoteHandler}>
+        Notes
+      </Button>
+      {content}
     </div>
   );
 }
