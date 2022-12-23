@@ -4,11 +4,10 @@ import Button from "../form-elements/Button";
 import classes from "./SignatureButton.module.css";
 
 function SignatureButton(props) {
-  let disabled = false;
+  let disabled = true;
   let buttonString = "SIGN HERE";
   if (props.lastStatus) {
     const type = props.lastStatus.type;
-    // const type = "volunteer-circulation";
     switch (type) {
       case "petition-filed":
         disabled = true;

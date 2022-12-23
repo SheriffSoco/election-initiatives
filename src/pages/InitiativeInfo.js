@@ -125,7 +125,7 @@ function InitiativeInfoPage(props) {
           notes={notes}
         />
         <FullTextLink />
-        <StatusSection />
+        <StatusSection lastStatus={lastStatus} />
         <SignatureButton
           onClick={openSignatureHandler}
           lastStatus={lastStatus}

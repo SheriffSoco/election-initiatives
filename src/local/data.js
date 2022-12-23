@@ -56,37 +56,42 @@ const Data = [
         date: "2/22/2022",
         type: "monthly-submission",
         text: "Chief petitioners submitted 4,515 signatures gathered during the previous month by all individuals paid to circulate.",
+        total: "4,515",
       },
       {
         date: "3/24/2022",
         type: "monthly-submission",
         text: "Chief petitioners submitted 19,692 signatures gathered during the previous month by all individuals paid to circulate for the total of 24,207.",
+        total: "24,207",
       },
       {
         date: "4/13/2022",
         type: "monthly-submission",
         text: "Chief petitioners submitted 42,887 signatures gathered during the previous month by all individuals paid to circulate for the total of 67,094.",
+        total: "67,094",
       },
-      {
-        date: "5/23/2022",
-        type: "monthly-submission",
-        text: "Chief petitioners submitted 59,013 signatures gathered during the previous month by all individuals paid to circulate for the total of 126,107.",
-      },
-      {
-        date: "5/27/2022",
-        type: "signatures-submitted",
-        text: "Signatures submitted for verification. 183,942 unverified signatures.",
-      },
-      {
-        date: "7/5/2022",
-        type: "petition-qualified",
-        text: "Signature verification has been completed. IP 2022-014 contains 155,343 valid signatures, or 84.11% of the 184,680 signatures accepted for verification. Petition has qualified for the November 8, 2022, General Election ballot. The total number of signatures accepted for verification includes sponsorship (1,409) and primary (183,271) signature submittals.",
-      },
-      {
-        date: "7/25/2022",
-        type: "measure-created",
-        text: "Measure 113",
-      },
+      // {
+      //   date: "5/23/2022",
+      //   type: "monthly-submission",
+      //   text: "Chief petitioners submitted 59,013 signatures gathered during the previous month by all individuals paid to circulate for the total of 126,107.",
+      //   total: "126,107",
+      // },
+      // {
+      //   date: "5/27/2022",
+      //   type: "signatures-submitted",
+      //   text: "Signatures submitted for verification. 183,942 unverified signatures.",
+      //   signatures: "183,942",
+      // },
+      // {
+      //   date: "7/5/2022",
+      //   type: "petition-qualified",
+      //   text: "Signature verification has been completed. IP 2022-014 contains 155,343 valid signatures, or 84.11% of the 184,680 signatures accepted for verification. Petition has qualified for the November 8, 2022, General Election ballot. The total number of signatures accepted for verification includes sponsorship (1,409) and primary (183,271) signature submittals.",
+      // },
+      // {
+      //   date: "7/25/2022",
+      //   type: "measure-created",
+      //   text: "Measure 113",
+      // },
     ],
   },
   {
