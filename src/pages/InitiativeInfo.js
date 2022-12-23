@@ -13,7 +13,6 @@ import { useForm } from "../components/hooks/useForm";
 import { VALIDATOR_NAME, VALIDATOR_REQUIRE } from "../util/validators";
 
 import Data from "../local/data";
-import "./InitiativeInfo.css";
 
 function InitiativeInfoPage(props) {
   const [formState, inputHandler] = useForm(
@@ -75,7 +74,7 @@ function InitiativeInfoPage(props) {
         <Modal
           show={showModal}
           onCancel={closeSignatureHandler}
-          header="test"
+          header="Sign Petition"
           footer={
             <Button onClick={signPetitionHandler} disabled={!formState.isValid}>
               SIGN
