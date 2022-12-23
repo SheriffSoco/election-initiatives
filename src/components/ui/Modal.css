@@ -11,7 +11,7 @@
 
 .modal__header {
   width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   background: #054d77;
   border-radius: 8px 8px 0 0;
 }
@@ -22,11 +22,15 @@
 }
 
 .modal__content {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
 }
 
 .modal__footer {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
+  background: lightgrey;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (min-width: 1080px) {

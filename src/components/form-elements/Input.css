@@ -39,3 +39,9 @@
   border-color: red;
   background: #ffd1d1;
 }
+
+.dropdown-input {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

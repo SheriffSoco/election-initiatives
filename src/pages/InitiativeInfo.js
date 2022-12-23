@@ -10,7 +10,7 @@ import Button from "../components/form-elements/Button";
 import Modal from "../components/ui/Modal";
 import Input from "../components/form-elements/Input";
 import { useForm } from "../components/hooks/useForm";
-import { VALIDATOR_NAME, VALIDATOR_REQUIRE } from "../util/validators";
+import { VALIDATOR_MINLENGTH, VALIDATOR_NAME, VALIDATOR_REQUIRE } from "../util/validators";
 
 import Data from "../local/data";
 
@@ -20,6 +20,7 @@ function InitiativeInfoPage(props) {
       firstName: { value: "", isValid: false },
       lastName: { value: "", isValid: false },
       address: { value: "", isValid: false },
+      info: { value: "", dropdown: "", isValid: false },
     },
     false
   );
@@ -35,6 +36,7 @@ function InitiativeInfoPage(props) {
   }
 
   function signPetitionHandler() {
+    console.log(formState);
     navigate("./confirm");
   }
 
@@ -105,6 +107,16 @@ function InitiativeInfoPage(props) {
             type="text"
             label="Address"
             validators={[VALIDATOR_REQUIRE()]}
+            errorText="Please enter a value"
+            onInput={inputHandler}
+          />
+          <Input
+            id="info"
+            element="dropdown-input"
+            type="number"
+            label="Info"
+            dropdownList={["Driver's License", "Passport", "Social Security"]}
+            validators={[[VALIDATOR_MINLENGTH(6)], [VALIDATOR_MINLENGTH(7)], [VALIDATOR_MINLENGTH(9)]]}
             errorText="Please enter a value"
             onInput={inputHandler}
           />
